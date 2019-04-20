@@ -17,3 +17,5 @@ The idea was to have a bunch of tagged commits that will make it easier to walk 
 `4` - Add a second entrypoint. Demo `SplitChunksPlugin`.
 
 `5` - Add CSS related loaders so we can make things pretty. Leave CSS inline.
+
+`6` - Add `MiniCssExtractPlugin` in order to extract inlined CSS imports to their own CSS files for production builds. Add postcss and autoprefixer to handle vendor prefixes when necessary.
