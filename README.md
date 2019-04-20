@@ -15,3 +15,5 @@ The idea was to have a bunch of tagged commits that will make it easier to walk 
 `3` - Use `webpack-dev-server` and watch `webpack.config.js` for changes.
 
 `4` - Add a second entrypoint. Demo `SplitChunksPlugin`.
+
+`5` - Add CSS related loaders so we can make things pretty. Leave CSS inline.
