@@ -11,3 +11,5 @@ The idea was to have a bunch of tagged commits that will make it easier to walk 
 `1` - Basic configuration to add `HtmlWebpackPlugin` and `CleanWebpackPlugin`, and a `--watch` npm script
 
 `2` - Add typescript loader support and a `tsconfig.json` file. Convert `.js` files to `.tsx` and `.ts`. Add `App` component.
+
+`3` - Use `webpack-dev-server` and watch `webpack.config.js` for changes.

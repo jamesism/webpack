@@ -4,6 +4,9 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
+  devServer: {
+    stats: "errors-only"
+  },
   module: {
     rules: [
       {
