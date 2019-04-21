@@ -1,15 +1,15 @@
 import { hot } from "react-hot-loader/root";
 import React from "react";
-import style from "./AnotherApp.scss";
+import style from "./HelloWorlds.scss";
 import { Counter } from "./components/Counter";
 
-export interface AnotherAppState {
+export interface HelloWorldsState {
   currentValue: number;
 }
 
-class AnotherAppComponent extends React.Component<{}, AnotherAppState> {
+class HelloWorldsComponent extends React.Component<{}, HelloWorldsState> {
   state = {
-    currentValue: 0
+    currentValue: 1
   };
 
   handleIncrease = () =>
@@ -21,17 +21,23 @@ class AnotherAppComponent extends React.Component<{}, AnotherAppState> {
   render() {
     const { currentValue } = this.state;
 
+    const worlds = new Array(currentValue).fill(1);
+
     return (
       <main>
-        <h1 className={style.BlueHeader}>Hello world!! --AnotherApp!</h1>
         <Counter
           value={currentValue}
           onIncrease={this.handleIncrease}
           onDecrease={this.handleDecrease}
         />
+        {worlds.map((_, index) => (
+          <h1 key={index} className={style.BlueHeader}>
+            Hello world!!
+          </h1>
+        ))}
       </main>
     );
   }
 }
 
-export const AnotherApp = hot(AnotherAppComponent);
+export const HelloWorlds = hot(HelloWorldsComponent);

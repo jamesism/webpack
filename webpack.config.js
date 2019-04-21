@@ -9,13 +9,13 @@ module.exports = (_, argv) => {
   const isDev = mode === "development";
 
   return {
-    entry: {
-      index: "./src/index.tsx",
-      another: "./src/another.tsx"
-    },
+    entry: "./src/index.tsx",
     devServer: {
       stats: "errors-only",
-      hotOnly: true
+      hotOnly: true,
+      historyApiFallback: {
+        index: "/"
+      }
     },
     module: {
       rules: [
@@ -52,11 +52,9 @@ module.exports = (_, argv) => {
           test: /\.(jpg|png)$/,
           use: {
             loader: "url-loader",
-            options: isDev
-              ? {}
-              : {
-                  limit: 5000
-                }
+            options: {
+              limit: 5000
+            }
           }
         },
         {

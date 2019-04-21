@@ -23,3 +23,5 @@ The idea was to have a bunch of tagged commits that will make it easier to walk 
 [`7`](https://github.com/jamesism/webpack/compare/6...7) - Add support for HMR! Convert from `ts-loader` to `babel-loader`, so [babel can do a better job for us](https://iamturns.com/typescript-babel/).
 
 [`8`](https://github.com/jamesism/webpack/compare/7...8) - Add `url-loader` and `file-loader` to handle loading images and fonts.
+
+[`9`](https://github.com/jamesism/webpack/compare/8...9) - Add `react-router` and `@loadable/components` to demo lazy loaded code splitting.

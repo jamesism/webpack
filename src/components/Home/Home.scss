@@ -1,0 +1,12 @@
+.Home {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  > span {
+    font-family: Arial;
+    padding: 5rem;
+    font-size: 200px;
+  }
+}
