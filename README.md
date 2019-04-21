@@ -21,3 +21,5 @@ The idea was to have a bunch of tagged commits that will make it easier to walk 
 [`6`](https://github.com/jamesism/webpack/compare/5...6) - Add `MiniCssExtractPlugin` in order to extract inlined CSS imports to their own CSS files for production builds. Add postcss and autoprefixer to handle vendor prefixes when necessary.
 
 [`7`](https://github.com/jamesism/webpack/compare/6...7) - Add support for HMR! Convert from `ts-loader` to `babel-loader`, so [babel can do a better job for us](https://iamturns.com/typescript-babel/).
+
+[`8`](https://github.com/jamesism/webpack/compare/7...8) - Add `url-loader` and `file-loader` to handle loading images and fonts.

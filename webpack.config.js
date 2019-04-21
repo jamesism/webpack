@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (_, argv) => {
   const { mode } = argv;
+  const isDev = mode === "development";
 
   return {
     entry: {
@@ -29,7 +30,7 @@ module.exports = (_, argv) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                hmr: mode === "development"
+                hmr: isDev
               }
             },
             {
@@ -46,6 +47,26 @@ module.exports = (_, argv) => {
             },
             "sass-loader"
           ]
+        },
+        {
+          test: /\.(jpg|png)$/,
+          use: {
+            loader: "url-loader",
+            options: isDev
+              ? {}
+              : {
+                  limit: 5000
+                }
+          }
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf)$/,
+          use: {
+            loader: "file-loader",
+            options: {
+              name: "fonts/[name].[ext]"
+            }
+          }
         }
       ]
     },
